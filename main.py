@@ -22,8 +22,11 @@ def guess_number(random_number, top_range, minimum_range):
   
   if (guess == random_number):
      return 
-
-  print("Try again")
+  if (guess < random_number):
+    response = "Higher"
+  else:
+    response = "Lower"
+  print(response+", try again!")
   guess_number(random_number, top_range, minimum_range)
 
 
